@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دليل أرقام الطوارئ المصرية الفوري</title>
+    <style>
+        /* تصميم عصري مريح للعين وسريع التحميل */
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --primary-color: #ff4d4d;
+            --text-color: #ffffff;
+            --text-secondary: #b3b3b3;
+            --accent-color: #ffcc00;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+
+        .header h1 {
+            color: var(--primary-color);
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+
+        /* شريط البحث الاحترافي */
+        .search-box {
+            width: 100%;
+            max-width: 500px;
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        #searchBar {
+            width: 100%;
+            padding: 16px 25px;
+            font-size: 1.1rem;
+            border: 2px solid var(--primary-color);
+            border-radius: 50px;
+            background-color: var(--card-bg);
+            color: var(--text-color);
+            outline: none;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+
+        #searchBar:focus {
+            box-shadow: 0 0 15px rgba(255, 77, 77, 0.5);
+        }
+
+        /* حاوية كروت الأرقام */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        /* تصميم الكارت */
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 20px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            border: 1px solid #2d2d2d;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary-color);
+            box-shadow: 0 8px 20px rgba(255, 77, 77, 0.2);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .card h2 {
+            margin: 0 0 10px 0;
+            font-size: 1.4rem;
+            color: var(--text-color);
+        }
+
+        .card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin: 0 0 20px 0;
+            min-height: 40px;
+        }
+
+        /* زر الاتصال المباشر بميزة النقر */
+        .call-btn {
+            display: block;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: background 0.2s;
+        }
+
+        .call-btn:hover {
+            background-color: #e60000;
+        }
+
+        /* رسالة تظهر لو لم يجد المستخدم نتائج */
+        #noResults {
+            display: none;
+            color: var(--accent-color);
+            font-size: 1.2rem;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>🚨 دليل أرقام الطوارئ المصرية</h1>
+        <p>موقع سريع مخصص للوصول الفوري لخطوط الدعم والنجدة. اضغط على الزر للاتصال مباشرة.</p>
+    </div>
+
+    <div class="search-box">
+        <input type="text" id="searchBar" onkeyup="filterNumbers()" placeholder="ابحث عن: إسعاف، كورونا، كهرباء، طفل، امرأة...">
+    </div>
+
+    <div id="noResults">❌ عذراً، لا توجد جهة طوارئ بهذا الاسم.</div>
+
+    <div class="grid-container" id="cardsContainer">
+        
+        <div class="card" data-keywords="شرطة نجدة امن حادثة سرقة">
+            <div class="card-icon">🚓</div>
+            <h2>شرطة النجدة</h2>
+            <p>بلاغات السرقة، الحوادث، والاضطرابات الأمنية العامة.</p>
+            <a href="tel:122" class="call-btn">📞 122</a>
+        </div>
+
+        <div class="card" data-keywords="اسعاف مستشفى طبيب مريض تعبان اصابة حادثة">
+            <div class="card-icon">🚑</div>
+            <h2>الإسعاف</h2>
+            <p>الحالات الطبية الطارئة، الحوادث، ونقل المرضى الحرجين.</p>
+            <a href="tel:123" class="call-btn">📞 123</a>
+        </div>
+
+        <div class="card" data-keywords="مطافئ حريق حريقة ماس كهربائي دخان">
+            <div class="card-icon">🚒</div>
+            <h2>المطافئ (الحماية المدنية)</h2>
+            <p>حرائق المباني، ماس كهربائي، وحالات الإنقاذ الطارئة.</p>
+            <a href="tel:180" class="call-btn">📞 180</a>
+        </div>
+
+        <div class="card" data-keywords="غاز طبيعي تسريب رائحة انفجار طوارئ">
+            <div class="card-icon">🔥</div>
+            <h2>طوارئ الغاز الطبيعي</h2>
+            <p>بلاغات تسريب الغاز في المنازل أو الشوارع.</p>
+            <a href="tel:129" class="call-btn">📞 129</a>
+        </div>
+
+        <div class="card" data-keywords="كهرباء انقطاع عمود انارة ماس طاقة">
+            <div class="card-icon">⚡</div>
+            <h2>طوارئ الكهرباء</h2>
+            <p>أعطال الشبكة الكهربائية وانقطاع التيار أو ماس الأعمدة.</p>
+            <a href="tel:121" class="call-btn">📞 121</a>
+        </div>
+
+        <div class="card" data-keywords="مياه شرب مجاري صرف صحي انفجار ماسورة">
+            <div class="card-icon">🚰</div>
+            <h2>طوارئ مياه الشرب والصرف</h2>
+            <p>انقطاع المياه، انفجار المواسير الرئيسية، وأعطال الصرف.</p>
+            <a href="tel:125" class="call-btn">📞 125</a>
+        </div>
+
+        <div class="card" data-keywords="طفل طفولة نجدة عنف اساءة حماية">
+            <div class="card-icon">👶</div>
+            <h2>خط نجدة الطفل</h2>
+            <p>المجلس القومي للطفولة والأمومة للإبلاغ عن انتهاكات الأطفال.</p>
+            <a href="tel:16000" class="call-btn">📞 16000</a>
+        </div>
+
+        <div class="card" data-keywords="امرأة نساء عنف المجلس القومي شكاوى تعنيف">
+            <div class="card-icon">👩</div>
+            <h2>مكتب شكاوى المرأة</h2>
+            <p>تلقي استشارات وبلاغات العنف ضد المرأة (المجلس القومي).</p>
+            <a href="tel:15115" class="call-btn">📞 15115</a>
+        </div>
+
+        <div class="card" data-keywords="ادمان مخدرات علاج مصحة صندوق مكافحة">
+            <div class="card-icon">💊</div>
+            <h2>علاج الإدمان والتعاطي</h2>
+            <p>خدمات استشارية وعلاجية مجانية وسرية بالكامل.</p>
+            <a href="tel:16023" class="call-btn">📞 16023</a>
+        </div>
+
+        <div class="card" data-keywords="صحة كورونا فيروس وزاره الطوارئ الطبية">
+            <div class="card-icon">🏥</div>
+            <h2>طوارئ وزارة الصحة</h2>
+            <p>الاستفسارات الطبية وبلاغات الأوبئة والأمراض المتوطنة.</p>
+            <a href="tel:105" class="call-btn">📞 105</a>
+        </div>
+
+        <div class="card" data-keywords="مرور طريق حوادث صحراوي عطل ونش">
+            <div class="card-icon">🛣️</div>
+            <h2>طوارئ المرور المركزي</h2>
+            <p>إغاثة الطرق السريعة والصحراوية وحوادث السير الكبرى.</p>
+            <a href="tel:01221110000" class="call-btn" style="font-size: 1rem;">📞 01221110000</a>
+        </div>
+
+        <div class="card" data-keywords="مستهلك حماية غش تجاري تموين اسعار">
+            <div class="card-icon">🛍️</div>
+            <h2>جهاز حماية المستهلك</h2>
+            <p>بلاغات الغش التجاري، التلاعب بالأسعار، والسلع الفاسدة.</p>
+            <a href="tel:19588" class="call-btn">📞 19588</a>
+        </div>
+
+    </div>
+
+    <script>
+        // محرك البحث الفوري الذكي بالكلمات الدلالية
+        function filterNumbers() {
+            let input = document.getElementById('searchBar').value.toLowerCase().trim();
+            let cards = document.getElementsByClassName('card');
+            let container = document.getElementById('cardsContainer');
+            let noResults = document.getElementById('noResults');
+            let hasVisibleCard = false;
+
+            for (let i = 0; i < cards.length; i++) {
+                let keywords = cards[i].getAttribute('data-keywords');
+                let title = cards[i].getElementsByTagName('h2')[0].innerText.toLowerCase();
+                
+                // البحث في العنوان وفي الكلمات الدلالية المخفية معاً
+                if (keywords.includes(input) || title.includes(input)) {
+                    cards[i].style.display = "flex";
+                    hasVisibleCard = true;
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+
+            // إظهار رسالة "لا توجد نتائج" لو كتب المستخدم كلمة غير موجودة
+            if (hasVisibleCard) {
+                noResults.style.display = "none";
+            } else {
+                noResults.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>
+

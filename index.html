@@ -1,134 +1,108 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🚨 دليل أرقام الطوارئ المصرية</title>
-    <link rel="stylesheet" href="style.css"> 
-</head>
-<body>
+/* 1. التنسيق العام للموقع والألوان الأصلية لبسمة */
+body {
+    font-family: 'Cairo', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7ebee; /* الخلفية الهادئة المائلة للوردي والرمادي المريح للعين */
+    color: #333333;
+    margin: 0;
+    padding: 0;
+    direction: rtl; /* لضبط الاتجاه العربي */
+}
 
-    <header style="text-align: center; padding: 20px;">
-        <h1>🚨 دليل أرقام الطوارئ المصرية</h1>
-        <p>موقع سريع مخصص للوصول الفوري لخطوط الدعم والنجدة. اضغط على الزر للاتصال مباشرة.</p>
-    </header>
+header {
+    background-color: #dc3545; /* اللون الأحمر القوي المميز لعنوان الطوارئ الرئيسي */
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
 
-    <!-- حاوية الـ Grid التي تجمع كل أرقامكِ الاثني عشر على نفس الخط -->
-    <div class="grid-container"> 
-        
-        <!-- 1. الشرطة -->
-        <div class="card" data-keywords="شرطة نجدة امن حادثة سرقة">
-            <div class="card-icon">🚓</div>
-            <h2>شرطة النجدة</h2>
-            <p>بلاغات السرقة، الحوادث، والاضطرابات الأمنية العامة.</p>
-            <a href="tel:122" class="call-btn emergency-btn">📞 اتصل الآن (122)</a>
-        </div>
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
 
-        <!-- 2. الإسعاف -->
-        <div class="card" data-keywords="اسعاف طبيب مستشفى مرض حادثة">
-            <div class="card-icon">🚑</div>
-            <h2>الإسعاف</h2>
-            <p>الحالات الطبية الطارئة، الحوادث، ونقل المرضى الحرجين.</p>
-            <a href="tel:123" class="call-btn emergency-btn">📞 اتصل الآن (123)</a>
-        </div>
+header p {
+    margin-top: 10px;
+    font-size: 16px;
+    opacity: 0.9;
+}
 
-        <!-- 3. المطافئ -->
-        <div class="card" data-keywords="مطافئ حريق نار انقاذ ماس">
-            <div class="card-icon">🚒</div>
-            <h2>المطافئ</h2>
-            <p>حرائق المباني، ماس كهربائي، وحالات الإنقاذ الطارئة.</p>
-            <a href="tel:180" class="call-btn emergency-btn">📞 اتصل الآن (180)</a>
-        </div>
-
-        <!-- 4. طوارئ الغاز -->
-        <div class="card" data-keywords="غاز تسريب طباخ نار">
-            <div class="card-icon">🔥</div>
-            <h2>طوارئ الغاز الطبيعي</h2>
-            <p>بلاغات تسريب الغاز في المنازل أو الشوارع.</p>
-            <a href="tel:129" class="call-btn">📞 اتصل الآن (129)</a>
-        </div>
-
-        <!-- 5. طوارئ الكهرباء -->
-        <div class="card" data-keywords="كهرباء نور انقطاع ماس عمود">
-            <div class="card-icon">⚡</div>
-            <h2>طوارئ الكهرباء</h2>
-            <p>أعطال الشبكة الكهربائية وانقطاع التيار أو ماس الأعمدة.</p>
-            <a href="tel:121" class="call-btn">📞 اتصل الآن (121)</a>
-        </div>
-
-        <!-- 6. طوارئ المياه والصرف -->
-        <div class="card" data-keywords="مياه صرف ماسورة انقطاع مجاري">
-            <div class="card-icon">🚰</div>
-            <h2>طوارئ مياه الشرب والصرف</h2>
-            <p>انقطاع المياه، انفجار المواسير الرئيسية، وأعطال الصرف.</p>
-            <a href="tel:125" class="call-btn">📞 اتصل الآن (125)</a>
-        </div>
-
-        <!-- 7. خط نجدة الطفل -->
-        <div class="card" data-keywords="طفل نجدة عنف اطفال اساءة">
-            <div class="card-icon">👶</div>
-            <h2>خط نجدة الطفل</h2>
-            <p>المجلس القومي للطفولة والأمومة للإبلاغ عن انتهاكات الأطفال.</p>
-            <a href="tel:16000" class="call-btn">📞 اتصل الآن (16000)</a>
-        </div>
-
-        <!-- 8. مكتب شكاوى المرأة -->
-        <div class="card" data-keywords="امرأة شكوى عنف استشارة سيدات">
-            <div class="card-icon">👩</div>
-            <h2>مكتب شكاوى المرأة</h2>
-            <p>تلقي استشارات وبلاغات العنف ضد المرأة (المجلس القومي).</p>
-            <a href="tel:15115" class="call-btn">📞 اتصل الآن (15115)</a>
-        </div>
-
-        <!-- 9. علاج الإدمان -->
-        <div class="card" data-keywords="ادمان علاج تعاطي مصحة سري مجاني">
-            <div class="card-icon">💊</div>
-            <h2>علاج الإدمان والتعاطي</h2>
-            <p>خدمات استشارية وعلاجية مجانية وسرية بالكامل.</p>
-            <a href="tel:16023" class="call-btn">📞 اتصل الآن (16023)</a>
-        </div>
-
-        <!-- 10. طوارئ وزارة الصحة -->
-        <div class="card" data-keywords="صحة مستشفى وباء مرض كورونا">
-            <div class="card-icon">🏥</div>
-            <h2>طوارئ وزارة الصحة</h2>
-            <p>الاستفسارات الطبية وبلاغات الأوبئة والأمراض المتوطنة.</p>
-            <a href="tel:105" class="call-btn">📞 اتصل الآن (105)</a>
-        </div>
-
-        <!-- 11. طوارئ المرور المركزي -->
-        <div class="card" data-keywords="مرور طريق سفر حادثة سيارة رادار">
-            <div class="card-icon">🛣</div>
-            <h2>طوارئ المرور المركزي</h2>
-            <p>إغاثة الطرق السريعة والصحراوية وحوادث السير الكبرى.</p>
-            <a href="tel:01221110000" class="call-btn">📞 اتصل الآن (01221110000)</a>
-        </div>
-
-        <!-- 12. جهاز حماية المستهلك -->
-        <div class="card" data-keywords="مستهلك غش تجاري اسعار تموين شكوى">
-            <div class="card-icon">🛍</div>
-            <h2>جهاز حماية المستهلك</h2>
-            <p>بلاغات الغش التجاري، التلاعب بالأسعار، والسلع الفاسدة.</p>
-            <a href="tel:19588" class="call-btn">📞 اتصل الآن (19588)</a>
-        </div>
-
-    </div> 
-
-    <!-- كود الـ Service Worker النظيف للعمل بدون إنترنت -->
-    <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js')
-          .then(reg => console.log('تم تفعيل ميزة العمل بدون إنترنت بنجاح!', reg))
-          .catch(err => console.log('حدث خطأ أثناء تفعيل الميزة:', err));
-      });
-    }
-    </script>
-</body>
-</html>
+/* 2. كود الترتيب السحري (الشبكة المتناسقة لترتيب الكروت على خط واحد) */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
-    padding: 20px;
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 3. تنسيق الكروت الفاخر ذو الحواف الدائرية */
+.card {
+    background-color: #ffffff; /* الكروت البيضاء الأنيقة لسهولة القراءة */
+    border-radius: 15px; /* حواف دائرية ناعمة واحترافية */
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* ظل خفيف جداً يعطي عمقاً للكارت */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #eaeaea;
+}
+
+/* تأثير حركي فخم عند مرور الماوس أو اللمس */
+.card:hover {
+    transform: translateY(-5px); /* يرتفع الكارت خفيفاً للأعلى */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12); /* يزداد الظل وضوحاً */
+}
+
+.card-icon {
+    font-size: 45px; /* تكبير حجم الأيقونة (الإيموجي) ليكون واضحاً */
+    margin-bottom: 15px;
+}
+
+.card h2 {
+    margin: 0 0 10px 0;
+    color: #2c3e50;
+    font-size: 22px;
+}
+
+.card p {
+    font-size: 15px;
+    color: #7f8c8d;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* 4. تنسيق أزرار الاتصال المباشر الأخضر الاحترافي */
+.call-btn {
+    display: inline-block;
+    background-color: #28a745; /* اللون الأخضر الصريح للاتصال الفوري */
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 25px; /* زوايا دائرية بالكامل للزر */
+    font-weight: bold;
+    font-size: 16px;
+    width: 80%; /* ليكون الزر عريضاً وسهل الضغط */
+    box-shadow: 0 3px 6px rgba(40, 167, 69, 0.2);
+    transition: all 0.2s ease;
+}
+
+.call-btn:hover {
+    background-color: #218838; /* يصبح الأخضر أغمق قليلاً عند اللمس */
+    transform: scale(1.03);
+}
+
+/* حركة النبض للكروت الأساسية الحرجّة لجذب الانتباه */
+.emergency-btn {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.5); }
+    70% { box-shadow: 0 0 0 12px rgba(40, 167, 69, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(40, 167, 69, 0); }
 }

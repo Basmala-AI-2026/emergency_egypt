@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🚨 دليل أرقام الطوارئ المصرية</title>
-    <!-- هنا يربط ملف الـ CSS الخارجي الخاص بكِ لتنسيق الألوان -->
     <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
@@ -14,10 +13,10 @@
         <p>موقع سريع مخصص للوصول الفوري لخطوط الدعم والنجدة. اضغط على الزر للاتصال مباشرة.</p>
     </header>
 
-    <!-- حاوية الـ Grid التي تجمع كل الكروت على نفس الخط -->
+    <!-- حاوية الـ Grid التي تجمع كل أرقامكِ الاثني عشر على نفس الخط -->
     <div class="grid-container"> 
         
-        <!-- 🚓 كارت شرطة النجدة (الشرطة) -->
+        <!-- 1. الشرطة -->
         <div class="card" data-keywords="شرطة نجدة امن حادثة سرقة">
             <div class="card-icon">🚓</div>
             <h2>شرطة النجدة</h2>
@@ -25,7 +24,7 @@
             <a href="tel:122" class="call-btn emergency-btn">📞 اتصل الآن (122)</a>
         </div>
 
-        <!-- 🚑 كارت الإسعاف -->
+        <!-- 2. الإسعاف -->
         <div class="card" data-keywords="اسعاف طبيب مستشفى مرض حادثة">
             <div class="card-icon">🚑</div>
             <h2>الإسعاف</h2>
@@ -33,7 +32,7 @@
             <a href="tel:123" class="call-btn emergency-btn">📞 اتصل الآن (123)</a>
         </div>
 
-        <!-- 🚒 كارت المطافئ -->
+        <!-- 3. المطافئ -->
         <div class="card" data-keywords="مطافئ حريق نار انقاذ ماس">
             <div class="card-icon">🚒</div>
             <h2>المطافئ</h2>
@@ -41,11 +40,81 @@
             <a href="tel:180" class="call-btn emergency-btn">📞 اتصل الآن (180)</a>
         </div>
 
-        <!-- 💡 يمكنك إضافة بقية كروت الطوارئ هنا بنفس الطريقة تماماً داخل الحاوية -->
+        <!-- 4. طوارئ الغاز -->
+        <div class="card" data-keywords="غاز تسريب طباخ نار">
+            <div class="card-icon">🔥</div>
+            <h2>طوارئ الغاز الطبيعي</h2>
+            <p>بلاغات تسريب الغاز في المنازل أو الشوارع.</p>
+            <a href="tel:129" class="call-btn">📞 اتصل الآن (129)</a>
+        </div>
 
-    </div> <!-- قفلة حاوية الـ Grid لضمان بقاء الكروت متراصة بجانب بعضها -->
+        <!-- 5. طوارئ الكهرباء -->
+        <div class="card" data-keywords="كهرباء نور انقطاع ماس عمود">
+            <div class="card-icon">⚡</div>
+            <h2>طوارئ الكهرباء</h2>
+            <p>أعطال الشبكة الكهربائية وانقطاع التيار أو ماس الأعمدة.</p>
+            <a href="tel:121" class="call-btn">📞 اتصل الآن (121)</a>
+        </div>
 
-    <!-- 🌐 كود الـ Service Worker النظيف والمصحح بالكامل للعمل بدون إنترنت -->
+        <!-- 6. طوارئ المياه والصرف -->
+        <div class="card" data-keywords="مياه صرف ماسورة انقطاع مجاري">
+            <div class="card-icon">🚰</div>
+            <h2>طوارئ مياه الشرب والصرف</h2>
+            <p>انقطاع المياه، انفجار المواسير الرئيسية، وأعطال الصرف.</p>
+            <a href="tel:125" class="call-btn">📞 اتصل الآن (125)</a>
+        </div>
+
+        <!-- 7. خط نجدة الطفل -->
+        <div class="card" data-keywords="طفل نجدة عنف اطفال اساءة">
+            <div class="card-icon">👶</div>
+            <h2>خط نجدة الطفل</h2>
+            <p>المجلس القومي للطفولة والأمومة للإبلاغ عن انتهاكات الأطفال.</p>
+            <a href="tel:16000" class="call-btn">📞 اتصل الآن (16000)</a>
+        </div>
+
+        <!-- 8. مكتب شكاوى المرأة -->
+        <div class="card" data-keywords="امرأة شكوى عنف استشارة سيدات">
+            <div class="card-icon">👩</div>
+            <h2>مكتب شكاوى المرأة</h2>
+            <p>تلقي استشارات وبلاغات العنف ضد المرأة (المجلس القومي).</p>
+            <a href="tel:15115" class="call-btn">📞 اتصل الآن (15115)</a>
+        </div>
+
+        <!-- 9. علاج الإدمان -->
+        <div class="card" data-keywords="ادمان علاج تعاطي مصحة سري مجاني">
+            <div class="card-icon">💊</div>
+            <h2>علاج الإدمان والتعاطي</h2>
+            <p>خدمات استشارية وعلاجية مجانية وسرية بالكامل.</p>
+            <a href="tel:16023" class="call-btn">📞 اتصل الآن (16023)</a>
+        </div>
+
+        <!-- 10. طوارئ وزارة الصحة -->
+        <div class="card" data-keywords="صحة مستشفى وباء مرض كورونا">
+            <div class="card-icon">🏥</div>
+            <h2>طوارئ وزارة الصحة</h2>
+            <p>الاستفسارات الطبية وبلاغات الأوبئة والأمراض المتوطنة.</p>
+            <a href="tel:105" class="call-btn">📞 اتصل الآن (105)</a>
+        </div>
+
+        <!-- 11. طوارئ المرور المركزي -->
+        <div class="card" data-keywords="مرور طريق سفر حادثة سيارة رادار">
+            <div class="card-icon">🛣</div>
+            <h2>طوارئ المرور المركزي</h2>
+            <p>إغاثة الطرق السريعة والصحراوية وحوادث السير الكبرى.</p>
+            <a href="tel:01221110000" class="call-btn">📞 اتصل الآن (01221110000)</a>
+        </div>
+
+        <!-- 12. جهاز حماية المستهلك -->
+        <div class="card" data-keywords="مستهلك غش تجاري اسعار تموين شكوى">
+            <div class="card-icon">🛍</div>
+            <h2>جهاز حماية المستهلك</h2>
+            <p>بلاغات الغش التجاري، التلاعب بالأسعار، والسلع الفاسدة.</p>
+            <a href="tel:19588" class="call-btn">📞 اتصل الآن (19588)</a>
+        </div>
+
+    </div> 
+
+    <!-- كود الـ Service Worker النظيف للعمل بدون إنترنت -->
     <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
